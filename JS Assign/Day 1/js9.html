@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest</title>
+    <script>
+        function calCompoundInterest() {
+            var p= document.getElementById("pr").value;
+            var rate = document.getElementById("ri").value;
+            var period = document.getElementById("period").value;
+            var res = 0
+            for (let i = 0; i < period; i++) {
+                 res += 1+rate/100;
+                
+            }
+            var amt = (p*res)-p;
+            document.getElementById("mydiv").innerHTML=amt;
+        }
+    </script>
+</head>
+<body>
+    <form><table style="background-color: beige;">
+        <th>Calculate Compound Interest</th>
+    <tr>
+        <td>Enter a Principal amount : <input type="number" id="pr"></td>
+    </tr>
+    <tr>
+        <td>Enter a rate of interest : &nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="ri"></td>
+    </tr>
+    <tr>
+        <td>Enter a period in years : &nbsp;&nbsp;&nbsp;<input type="number" id="period"></td>
+    </tr>
+    <tr>
+        <td><button type="button" id="btn" onclick="calCompoundInterest()">Calculate C.I.</button></td>
+    </tr>
+    <tr>
+        <td><div id="mydiv"></div></td>
+    </tr> 
+</table></form> 
+</body>
+</html>

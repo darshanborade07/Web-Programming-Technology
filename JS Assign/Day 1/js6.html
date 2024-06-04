@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sumOfDigit() {
+            var num = parseInt(document.getElementById("n1").value);
+            var digit = 0;
+            var sum = 0;
+            while (num > 0) {
+                dig = num % 10;
+                sum = sum + dig;
+                num = parseInt(num/10);
+            }
+            document.getElementById("mydiv").innerHTML+=sum;
+        }
+    </script>
+</head>
+<body>
+    <form><table style="background-color: antiquewhite;">
+        <th>Sum of All Digits</th>
+    <tr>
+        <td>Number : <input type="text" name="num1" id="n1" ></td>
+    </tr>
+    <tr>
+        <td><button type="button" name="btn" id="num" value="num" onclick="sumOfDigit()">Sum of Digit</button></td>
+    </tr>
+    <tr>
+        <td><div id="mydiv"></div></td>
+    </tr>
+</table></form>
+</body>
+</html>

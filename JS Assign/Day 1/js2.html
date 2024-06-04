@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function printmsg() {
+            var msg = document.getElementById("msg").value;
+            var num = parseInt(document.getElementById("n").value);
+
+            for (let i = 0; i < num; i++) {
+                document.getElementById("mydiv").innerHTML+=msg+"<br>";
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <form><table style="background-color: azure;">
+        <th>Print a message</th>
+    <tr>
+        <td>Enter a message : <input type="text" name="message" id="msg" placeholder="Enter a message"></td>
+    </tr>
+    
+    <tr>
+        <td>Enter a number to print mesg no of times : <input type="text" name="num" id="n" ></td>
+    </tr>
+
+    <tr>
+        <td><button type="button" name="btn" id="btn" onclick="printmsg()">Print a message</button></td>
+    </tr>
+    <tr>
+        <td><div id="mydiv"></div></td>
+    </tr>
+</table></form>
+</body>
+</html>

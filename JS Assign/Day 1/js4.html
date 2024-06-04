@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function performOpr() {
+            var num1 = parseInt(document.getElementById("n1").value);
+            var num2 = parseInt(document.getElementById("n2").value);
+            var opr = document.getElementById("opr").value;
+
+            switch (opr) {
+                case "+":
+                    document.getElementById("mydiv").innerHTML="Addition : "+(num1+num2);
+                    break;
+                case "-":
+                document.getElementById("mydiv").innerHTML="Subtraction : "(num1-num2);
+                break;
+                case "*":
+                document.getElementById("mydiv").innerHTML="Multiplication : "+(num1*num2);
+                break;
+                case "/":
+                document.getElementById("mydiv").innerHTML="Division : "+(num1/num2);
+                break;
+                default:
+                    document.getElementById("mydiv").innerHTML="invalid entry";
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form><table style="background-color: antiquewhite;">
+        <th>Arithmetic Operations</th>
+    <tr>
+        <td>Enter 1st number : <input type="number" name="num" id="n1" ></td>
+    </tr>
+    <tr>
+        <td>Enter 2nd number : <input type="number" name="num" id="n2"></td>
+    </tr>
+    <tr>
+        <td>Enter a operator : <input type="text" name="operator" id="opr"></td>
+    </tr>
+    <tr>
+        <td><button type="button" name="btn" id="btn" onclick="performOpr()">Perform a operation</button></td>
+    </tr>
+    <tr>
+        <td><div id="mydiv"></div></td>
+    </tr> 
+</table></form> 
+  </body>
+</html>

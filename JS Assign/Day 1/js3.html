@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function printEvenNo() {
+            var num = document.getElementById("n").value;
+            for (let i = 0; i < num; i++) {
+                
+                if (i % 2 == 0) {
+                    var res = i
+                    document.getElementById("mydiv").innerHTML+=i+"<br>"
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form><table style="background-color: bisque;">
+        <th>Print Even number</th>
+    <tr>
+        <td>Enter a Number : <input type="number" name="num" id="n" ></td>
+    </tr>
+    
+    <tr>
+        <td><button type="button" name="btn" id="btn" onclick="printEvenNo()">Print all Even numbers</button></td>
+    </tr>
+    <tr>
+        <td><div id="mydiv"></div></td>
+    </tr>
+</table></form>
+</body>
+</html>

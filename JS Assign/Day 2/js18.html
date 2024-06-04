@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function stringfunctions() {
+            var str = document.getElementsById("string").value;
+            var substr = document.getElementById("substr").value;
+            var replace = document.getElementById("replacestr").value;
+            var ip = document.getElementsByName("str");
+            
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <table style="background-color: antiquewhite;">
+            <tr>
+                <td>Enter String : </td>
+                <td><input type="text" id="string"></td>
+            </tr>
+            <tr>
+                <td>Enter sub string : </td>
+                <td><input type="text" id="substr"></td>
+            </tr>
+            <tr>
+                <td>Replace with string : </td>
+                <td><input type="text" id="replacestr"></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="str" id="search" value="search"><label for="search">Search substring in main string</label></td>
+                <td><input type="radio" name="str" id="upper" value="upper"><label for="upper">To Upper Case</label></td>
+                <td><input type="radio" name="str" id="lower" value="lower"><label for="lower">To Lower Case</label></td>
+                <td><input type="radio" name="str" id="trim" value="trim"><label for="trim">Trim spaces</label></td>
+                <td><input type="radio" name="str" id="concatenated" value="concatenated"><label for="concatenated">Concatenated</label></td>
+                <td><input type="radio" name="str" id="replace" value="replace"><label for="replace">Replace</label></td>
+            </tr>
+            <tr>
+                <td><button type="button" name="select" id="select" onclick="stringfunctions()">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
