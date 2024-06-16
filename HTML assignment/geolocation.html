@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Geolocation Demo</title>
+    <script>
+        function displayLocation() {
+            //to check wheather geolocation is supported or not 
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showpos,showerr);
+            }else{
+                document.getElementById("myloc").innerHTML="Location is not supported by browser";
+            }
+        }
+
+        function showpos(position) {
+            document.getElementById("myloc").innerHTML="Lattitude :"+position.coords.latitude+"<br>Longitude :"+position.coords.longitude;
+        }
+
+        function showerr() {
+            document.getElementById("myloc").innerHTML="Error occured";
+        }
+    </script>
+    <!-- To include css file in html-->
+     <link rel="stylesheet" href="Header.css">
+     <script src="./jquery.js"></script>
+     <script src="./js/bootstrap.js"></script>
+<link rel="stylesheet" href="./css/bootstrap.css">
+
+</head>
+<body>
+    <header class="myclass">GeoLocation (Get your Current Location)</header><br>
+    <div>
+    <button type="button" name="btn" id="btn" class="btn btn-success" onclick="displayLocation()">Get Location Details</button>
+    <p id="myloc"></p>
+</div>
+</body>
+</html>
