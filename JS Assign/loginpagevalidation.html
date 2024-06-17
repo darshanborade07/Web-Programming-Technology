@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Page</title>
+    <script>
+        function validateusername() {
+            uname= document.getElementById("uname").value;
+            if(uname.trim().length==0){
+                document.getElementById("unameerr").innerHTML="Username is mandatory"
+                return false;
+            }else{
+                document.getElementById("unameerr").innerHTML="";
+                return true;
+            }
+        }
+        function validatepassword() {
+            pass = document.getElementById("pass").value;
+            if(pass.trim().length==0){
+                document.getElementById("passerr").innerHTML="Password is mandatory"
+                return false;
+            }else{
+                document.getElementById("passerr").innerHTML="";
+                return true;
+            }
+        }
+        function validatedata() {
+            flag = validateusername();
+            flag1 = validatepassword();
+            if (flag && flag1) {
+                return true;
+            } else {
+                return false;
+            }
+            
+        }
+    </script>
+     <script src="./jquery.js"></script>
+     <script src="./js/bootstrap.js"></script>
+<link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+<body>
+    <table>
+        <form onsubmit="return validatedata()">
+            <tr>
+                <td>User Name :</td>
+                <td><input type="text" name="uname" id="uname"></td>
+                <td id="unameerr"></td>
+            </tr>
+            <tr>
+                <td>Password :</td>
+                <td><input type="password" name="pass" id="pass"></td>
+                <td id="passerr"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit" name="btn" class="btn btn-success">Login</button></td>
+                <td></td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>
