@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Document</title>
+</head>
+<script>
+function calculation(op) {
+    var num1 = parseInt(document.getElementById("num1").value);
+    var num2 = parseInt(document.getElementById("num2").value);
+
+    switch (op) {
+        case "add":
+            var res = num1 + num2;
+            break;
+        case "sub":
+            var res = num1 - num2;
+            break;
+            case "mul":
+            var res = num1 * num2;
+            break; 
+            case "div":
+            var res = num1 / num2;
+            break;
+            case "pow":
+            //var res = num1**num2;
+            var res = Math.pow(num1 , num2);
+            break;   
+        default:
+            break;
+    }
+    document.getElementById("mydiv").innerHTML="Result : "+res;
+}
+</script>
+<body>
+    <form>
+        Num 1 : <input type="text" name="num1" id="num1"><br>
+        Num 2 : <input type="text" name="num2" id="num2"><br>
+        <button type="button" name="btn" id="btn1" value="add" onclick="calculation('add')">Add</button>
+        <button type="button" name="btn" id="btn2" value="sub" onclick="calculation('sub')">Sub</button>
+        <button type="button" name="btn" id="btn3" value="mul" onclick="calculation('mul')">Mutliplication</button>
+        <button type="button" name="btn" id="btn4" value="div" onclick="calculation('div')">Division</button>
+        <button type="button" name="btn" id="btn5" value="pow" onclick="calculation('pow')">Power</button>
+        <button type="reset" name="btn" id="btn6">Clear</button>
+        <div id="mydiv"></div>
+    </form>
+</body>
+</html>
